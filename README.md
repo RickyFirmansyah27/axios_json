@@ -1,4 +1,4 @@
-#Exercise Axios Http clinet dan jsonplaceholder
+# Exercise Axios Http clinet dan jsonplaceholder
 
 ### Install Package
 Instalasi semua package yang diperlukan dalam menjalankan miniapp
