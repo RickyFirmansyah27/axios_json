@@ -1,10 +1,7 @@
 import express from "express";
 import UserRoute from './router/UserRoute.js'
-import axios from "axios";
 
 const app = express();
-
-
 
 app.use(UserRoute);
 
