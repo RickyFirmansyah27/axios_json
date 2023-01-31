@@ -21,6 +21,7 @@ export const createUser = async (req,res) => {
 
 export const updateUser = async (req,res) => {
     try {
+        const { id } = req.params;
         const response = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, update);
         res.json(response.data);
     } catch (error) {
@@ -31,6 +32,7 @@ export const updateUser = async (req,res) => {
 
 export const updateData = async (req,res) => {
     try {
+        const { id } = req.params;
         const response = await axios.patch(`https://jsonplaceholder.typicode.com/users/${id}`, dataUpdate);
         res.json(response.data);
     } catch (error) {
@@ -41,9 +43,9 @@ export const updateData = async (req,res) => {
 
 export const deleteUser = async (req, res) => {
     try {
-        id: req.params.id
+        const { id } = req.params;
         const response = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-        res.json(response.data);
+        res.status(200).json({msg: "User Deleted"});
     } catch (error) {
         res.status(500).json({ msg: error.message });
     }
