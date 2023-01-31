@@ -9,7 +9,7 @@ export const getUsers = async (req, res) => {
     }
 };
 
-export const createUser = async (data) => {
+export const createUser = async (req,res) => {
     try {
         const response = await axios.post('https://jsonplaceholder.typicode.com/users', data);
         res.json(response.data);
@@ -19,7 +19,7 @@ export const createUser = async (data) => {
 
 };
 
-export const updateUser = async (update) => {
+export const updateUser = async (req,res) => {
     try {
         const response = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, update);
         res.json(response.data);
@@ -29,7 +29,7 @@ export const updateUser = async (update) => {
 
 }
 
-export const updateData = async (dataUpdate) => {
+export const updateData = async (req,res) => {
     try {
         const response = await axios.patch(`https://jsonplaceholder.typicode.com/users/${id}`, dataUpdate);
         res.json(response.data);
