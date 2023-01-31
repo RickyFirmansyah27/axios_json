@@ -41,14 +41,13 @@ export const updateData = async (req,res) => {
 
 export const deleteUser = async (req, res) => {
     try {
+        id: req.params.id
         const response = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ msg: error.message });
     }
 }
-
-
 
 
 export const update = {
