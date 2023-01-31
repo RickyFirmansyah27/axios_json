@@ -12,9 +12,9 @@ export const getUsers = async (req, res) => {
 export const createUser = async (data) => {
     try {
         const response = await axios.post('https://jsonplaceholder.typicode.com/users', data);
-        return response.data;
+        res.json(response.data);
     } catch (error) {
-        throw new Error(error.message);
+        res.status(500).json({ msg: error.message });
     }
 
 };
@@ -22,9 +22,9 @@ export const createUser = async (data) => {
 export const updateUser = async (update) => {
     try {
         const response = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, update);
-        return response.data;
+        res.json(response.data);
     } catch (error) {
-        throw new Error(error.message);
+        res.status(500).json({ msg: error.message });
     }
 
 }
@@ -32,19 +32,19 @@ export const updateUser = async (update) => {
 export const updateData = async (dataUpdate) => {
     try {
         const response = await axios.patch(`https://jsonplaceholder.typicode.com/users/${id}`, dataUpdate);
-        return response.data;
+        res.json(response.data);
     } catch (error) {
-        throw new Error(error.message);
+        res.status(500).json({ msg: error.message });
     }
 
 }
 
-export const deleteUser = async () => {
+export const deleteUser = async (req, res) => {
     try {
         const response = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-        return response.data;
+        res.json(response.data);
     } catch (error) {
-        throw new Error(error.message);
+        res.status(500).json({ msg: error.message });
     }
 }
 
@@ -57,7 +57,7 @@ export const update = {
     "email": "belajar@node.js",
 }
 
-export const data = {
+const data = {
     "name": "John Doe",
     "username": "johndoe",
     "email": "johndoe@example.com",
@@ -75,6 +75,29 @@ export const data = {
     "website": "johndoe.com",
     "company": {
         "name": "John Doe Co.",
+        "catchPhrase": "Where quality meets affordability.",
+        "bs": "We do things right."
+    }
+};
+
+const dataUpdate = {
+    "name": "admin",
+    "username": "adminode",
+    "email": "admin@node.com",
+    "address": {
+        "street": "123 Main js.",
+        "suite": "Apt. 10",
+        "city": "admin town",
+        "zipcode": "12345",
+        "geo": {
+            "lat": "37.7749",
+            "lng": "-122.4194"
+        }
+    },
+    "phone": "555-555-5555",
+    "website": "admin.com",
+    "company": {
+        "name": "admin  Co.",
         "catchPhrase": "Where quality meets affordability.",
         "bs": "We do things right."
     }
