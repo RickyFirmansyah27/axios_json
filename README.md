@@ -48,5 +48,19 @@ DELETE  http://localhost:3000/delete/1
 ```
 ---------
 
+#### Note
+Pada project Node JS ini tidak menggunakan Common JS sehingga dalam
+pemanggilan module menggunakan ES6 dengan menambahkan type : module 
+pada package.json
+```bash
+{
+"name": "axioscrud",
+  "version": "1.0.0",
+  "description": "crud with axios http client",
+  "type": "module",
+  "main": "index.js"
+}
+```
+
 
 
