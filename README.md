@@ -1,14 +1,14 @@
 #Exercise Axios Http clinet dan jsonplaceholder
 
 ### Install Package
-#### Instalasi semua package yang diperlukan dalam menjalankan miniapp
+Instalasi semua package yang diperlukan dalam menjalankan miniapp
 ```bash
 npm install
 ```
 
 
 ### Run
-#### Ada dua command yang harus di run  yaitu:
+Ada dua command yang harus di run  yaitu:
 ```bash
 nodemon index
 ```
