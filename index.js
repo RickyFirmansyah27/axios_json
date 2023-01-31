@@ -1,7 +1,5 @@
 import express from "express";
 import UserRoute from './router/UserRoute.js'
-import { createUser, data } from "./Controller/data.js";
-import router from "./router/UserRoute.js";
 import axios from "axios";
 
 const app = express();
