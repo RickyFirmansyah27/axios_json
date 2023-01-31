@@ -8,7 +8,7 @@ npm install
 
 
 ### Run
-Ada dua command yang harus di run  yaitu:
+#### Note : server running pada port 3000 
 ```bash
 nodemon index
 ```
