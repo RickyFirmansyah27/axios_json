@@ -20,7 +20,7 @@ nodemon index
 GET localhost:3000/users
 POST localhost:3000/create
 PATCH localhost:3000/updateData/1
-PUT localhost:3000/userUpdate/1
+PUT localhost:3000/updateUser/1
 DELETE localhost:3000/delete/1
 ```
 
