@@ -24,7 +24,7 @@ PUT localhost:3000/userUpdate/1
 DELETE localhost:3000/delete/1
 ```
 
-##### Note
+#### Note :
 Data yang di POST, PATCH, dan PUT sudah di inisiasi pada Controller 
 Sehingga testing pada Request.res hanya menyertakan header saja
 ```bash
@@ -47,5 +47,6 @@ Content-Type: application/json
 DELETE  http://localhost:3000/delete/1
 ```
 ---------
+
 
 
